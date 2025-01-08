@@ -22,7 +22,7 @@ const About = ({isDarkMode}) => {
                 rounded-3xl' />
             </motion.div>
             <motion.div 
-            className='flex-1 flex items-center justify-center'>
+            className='flex-1 justify-center'>
               <p className='text-center mb-10 max-w-2xl font-Ovo'
               >
                 Hello, my name is Ethan Escat currently a third year studying EECS at Cal. I have a deep interest in 
