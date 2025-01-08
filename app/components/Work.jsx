@@ -19,7 +19,7 @@ const Work = ({isDarkMode}) => {
         <motion.p 
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
         Welcome to my web development portfolio! Explore a collection of projects 
-        showcasing my expertise in front-end development.
+        showcasing my passion of software development and graphic design.
         </motion.p>
 
     <motion.div 
