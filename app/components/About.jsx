@@ -15,7 +15,7 @@ const About = ({isDarkMode}) => {
           About Me</motion.h2>
 
           <motion.div 
-          className='flex w-full flex-col lg:flex-row items-start gap-16 my-10'>
+          className='flex w-full text-center flex-col lg:flex-row items-start gap-16 my-10'>
             <motion.div 
             className='w-64 sm:w-80 rounded-3xl max-w-none'>
                 <Image src={assets.user_image} alt='user' className='w-full
