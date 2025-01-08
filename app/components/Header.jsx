@@ -58,7 +58,7 @@ const Header = ({isDarkMode}) => {
         initial={{y: 30, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.6, delay: 1.2}}
-        href="https://www.linkedin.com/in/eescat2004/" target="_blank" rel="noopener noreferrer" className='px-10 py-3 border rounded-full border-gray-500 flex 
+        href="https://www.linkedin.com/in/eescat2004/" target="_blank" rel="noopener noreferrer" className='px-12 py-3 border rounded-full border-gray-500 flex 
         items-center gap-2 bg-blue-400 dark:text-black hover:bg-blue-500'>
                 LinkedIn <Image src={assets.linkedIn} alt='' className='w-4' /></motion.a>
         </div>
