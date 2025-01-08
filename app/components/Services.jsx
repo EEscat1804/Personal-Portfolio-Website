@@ -18,8 +18,8 @@ const Services = () => {
 
         <motion.p 
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-            I am a frontend developer from California, USA with 10 years of experience 
-            in multiple companies like Microsoft, Tesla, and Apple.
+            My projects include practice in different areas of Computer and Data Science. 
+            I was able to combine my love for graphic design and fullstack development.
         </motion.p>
         
     <motion.div 
