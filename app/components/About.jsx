@@ -23,7 +23,7 @@ const About = ({isDarkMode}) => {
             </motion.div>
             <motion.div 
             className='flex-1 flex flex-col items-center lg:items-start'>
-              <p className='text-center lg:text-left mb-10 max-w-2xl font-Ovo'
+              <p className='text-center lg:text-left mb-10 max-w-6xl font-Ovo'
               >
                 Hello, my name is Ethan Escat currently a third year studying EECS at Cal. I have a deep interest in 
                 robotics and AI and I want to use this interest to make lives of others easier. At Cal I have taken coursework that
