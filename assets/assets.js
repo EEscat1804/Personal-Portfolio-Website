@@ -98,13 +98,13 @@ export const workData = [
     },
     {
         title: 'NBA MVP Predictor',
-        description: '(Data Analysis)',
+        description: '(Data Analysis/ML)',
         bgImage: 'work-5.png',
         link: 'https://github.com/EEscat1804/NBA-MVP-Predictor',
     },
     {
         title: 'Etherprint',
-        description: '(Fullstack)',
+        description: '(Fullstack/Design)',
         bgImage: '/work-3.png',
         link: 'https://github.com/EEscat1804/Etherprints',
         demolink: 'https://ethanescat.com/',
@@ -121,7 +121,7 @@ export const serviceData = [
     { icon: assets.web_icon, title: 'Software Engineering', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Data Analysis', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'Video Editing', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics Design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.graphics_icon, title: 'Graphic Design', description: 'Creative design solutions to enhance visual communication...', link: '' },
 ]
 
 export const infoList = [
