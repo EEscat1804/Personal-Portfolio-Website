@@ -15,21 +15,20 @@ const About = ({isDarkMode}) => {
           About Me</motion.h2>
 
           <motion.div 
-          className='flex w-full justify-items-center justify-center flex-col lg:flex-row items-start gap-16 my-10'>
+          className='flex w-full justify-items-center justify-center flex-col lg:flex-row items-center gap-16 my-10'>
             <motion.div 
-            className='w-64 sm:w-80 rounded-3xl max-w-none'>
-                <Image src={assets.user_image} alt='user' className='w-full
-                rounded-3xl' />
+            className='w-64 justify-center items-center sm:w-80 rounded-3xl max-w-none'>
+                <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' />
             </motion.div>
             <motion.div 
             className='flex-1 justify-center'>
               <p className='text-center mb-10 max-w-8xl font-Ovo'>
-               Hello, my name is Ethan Escat, currently a third-year studying EECS at Cal. I have a deep interest in robotics and AI, 
-               and I want to use this interest to make the lives of others easier. At Cal I have taken coursework that lets me practice 
-               my teamwork and collaboration skills. Before Berkeley I worked as a math tutor for my community college that allowed me to 
-               break out of my shell and develop key communication skills. Currently I am a member of PASAE (Pilipinx Association of Students, Architects, and Engineers) 
-               as a transfer rep intern, where I help represent transfer STEM students and assist in providing resources to help transfers find their place in Berkeley. 
-               I am eager to improve my skills and gain new experiences. I am open to work and finding new opportunities, so feel free to connect with me!
+                Hello, my name is Ethan Escat currently a third year studying EECS at Cal. I have a deep interest in 
+                robotics and AI and I want to use this interest to make lives of others easier. At Cal I have taken coursework that
+                lets me practice my teamwork and collaboration skills. Before Berkeley I worked as a math tutor for my community college
+                that allowed me to break out of my shell and develop key communication skills. Currently I am a member of PASAE as a transfer
+                rep intern where I help represent transfer STEM students and providing resources to help transfers find their place in Berkeley. 
+                I am eager to improve my skills and gain new experiences, I am open to work and find new opportunities so feel free to connect with me!
               </p>
 
               <motion.ul 
@@ -68,3 +67,4 @@ const About = ({isDarkMode}) => {
 }
 
 export default About
+
