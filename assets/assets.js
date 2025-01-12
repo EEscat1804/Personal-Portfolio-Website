@@ -38,6 +38,9 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import linkedIn from './linkedIn.png'
 import black_arrow from './right-arrow-black.png'
 import jupiter from './jupiter.png'
+import sendarrow from './sendarrow.png'
+import nba from './nba.png'
+import pycharm from './pycharm.png'
 
 export const assets = {
     user_image,
@@ -80,26 +83,31 @@ export const assets = {
     linkedIn,
     black_arrow,
     jupiter,
+    sendarrow,
+    nba,
+    pycharm,
 };
 
 export const workData = [
     {
         title: 'Ethernet',
         description: '(Fullstack)',
-        bgImage: '/work-1.png',
-        link: 'https://github.com/EEscat1804/Ethernet',
+        bgImage: 'work-1.png',
+        link: 'https://github.com/EEscat1804/Ethernetmain',
+        demolink: 'https://ethanescat.com/',
     },
     {
         title: 'NBA Mvp Predictor',
         description: '(Data Analysis)',
-        bgImage: '/work-2.png',
+        bgImage: 'work-2.png',
         link: 'https://github.com/EEscat1804/NBA-MVP-Predictor',
     },
     {
         title: 'Etherprint',
-        description: '(Fullstack/Graphic Design)',
+        description: '(Fullstack)',
         bgImage: '/work-3.png',
-        link: 'https://github.com/EEscat1804/EtherPrint-CustomShirts',
+        link: 'https://github.com/EEscat1804/Etherprints',
+        demolink: 'https://ethernetmain.vercel.app/',
     },
     {
         title: 'Spotify Playlist Analysis',
@@ -123,5 +131,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git, assets.jupiter
+    assets.git, assets.vscode, assets.pycharm, assets.jupiter, assets.mongodb
 ];
