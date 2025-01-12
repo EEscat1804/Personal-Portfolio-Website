@@ -97,7 +97,7 @@ export const workData = [
         demolink: 'https://ethernetmain.vercel.app/',
     },
     {
-        title: 'NBA Mvp Predictor',
+        title: 'NBA MVP Predictor',
         description: '(Data Analysis)',
         bgImage: 'work-5.png',
         link: 'https://github.com/EEscat1804/NBA-MVP-Predictor',
