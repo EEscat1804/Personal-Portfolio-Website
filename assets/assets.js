@@ -99,7 +99,7 @@ export const workData = [
     {
         title: 'NBA Mvp Predictor',
         description: '(Data Analysis)',
-        bgImage: 'work-2.png',
+        bgImage: 'work-5.png',
         link: 'https://github.com/EEscat1804/NBA-MVP-Predictor',
     },
     {
