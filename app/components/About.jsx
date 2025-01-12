@@ -22,8 +22,8 @@ const About = ({isDarkMode}) => {
                 rounded-3xl' />
             </motion.div>
             <motion.div 
-            className='flex-1 flex flex-col items-center lg:items-start'>
-              <p className='text-center justify-center mb-10 max-w-8xl font-Ovo'
+            className='flex-1 justify-center'>
+              <p className='text-center mb-10 max-w-4xl font-Ovo'
               >
                 Hello, my name is Ethan Escat currently a third year studying EECS at Cal. I have a deep interest in 
                 robotics and AI and I want to use this interest to make lives of others easier. At Cal I have taken coursework that
@@ -49,7 +49,7 @@ const About = ({isDarkMode}) => {
               </motion.ul>
 
               <motion.h4 
-              className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I Use</motion.h4>
+              className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Tools I Use:</motion.h4>
 
               <motion.ul 
               className='flex items-center gap-3 sm:gap-5'>
