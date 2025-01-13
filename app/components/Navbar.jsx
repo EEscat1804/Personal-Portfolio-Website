@@ -47,13 +47,13 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 <li><a className='font-Ovo' href="#contact">Contact Me</a></li>
             </ul>
 
-            <div className='flex items-center gap-0.5'> 
+            <div className='flex items-center'> 
 
                 <button onClick={()=> setIsDarkMode(prev => !prev)}>
                     <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='' className='w-6' />
                 </button>
 
-                <a href="#contact" className='hidden lg:flex items-center gap-2 px-3
+                <a href="#contact" className='hidden lg:flex items-center gap-2 px-2.5
                 py-2 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50'>Contact 
                 <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt="" className='w-3'/> </a>
 
