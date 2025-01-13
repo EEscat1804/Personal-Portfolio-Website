@@ -25,7 +25,7 @@ const Header = ({isDarkMode}) => {
     whileInView={{y: 0, opacity: 1}}
     transition={{duration: 0.8, delay: 0.5}}
     className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'>
-        Aspiring engineer based in California.</motion.h1>
+        Aspring Engineer based in California.</motion.h1>
 
         <motion.p 
         initial={{opacity: 0}}
@@ -36,31 +36,37 @@ const Header = ({isDarkMode}) => {
         applications of robotics and AI.
         </motion.p>
 
-        <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-            <motion.a 
-            initial={{y: 30, opacity: 0}}
-            whileInView={{y: 0, opacity: 1}}
-            transition={{duration: 0.6, delay: 1}}
-            href="#contact" className='px-10 py-3 border border-white rounded-full 
-            bg-black text-white flex items-center gap-2 hover:bg-darkHover'> Contact Me 
-            <Image src={assets.right_arrow_white} alt='' 
-            className='w-4' /></motion.a>
+        <div className="flex flex-col sm:flex-row items-center gap-2 mt-4">
+          <motion.a
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            href="#contact"
+            className="w-48 h-14 border border-white rounded-full bg-black text-white flex items-center justify-center gap-2 hover:bg-darkHover">
+            Contact Me
+            <Image src={assets.right_arrow_white} alt="" className="w-4" />
+          </motion.a>
 
-        <motion.a 
-        initial={{y: 30, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 0.6, delay: 1.2}}
-        href="/sample-resume.pdf" download="Ethan_Escat_Resume.pdf" className='px-10 py-3 border rounded-full border-gray-500 flex 
-        items-center gap-2 bg-white dark:text-black hover:bg-gray-300'>
-                My Resume <Image src={assets.download_icon} alt='' className='w-4' /></motion.a>
+          <motion.a 
+              initial={{y: 30, opacity: 0}}
+              whileInView={{y: 0, opacity: 1}}
+              transition={{duration: 0.6, delay: 1.2}}
+              href="/sample-resume.pdf" download="Ethan_Escat_Resume.pdf" className='w-48 h-14 border rounded-full border-gray-500 flex 
+              items-center justify-center gap-2 bg-white dark:text-black hover:bg-gray-300'>
+              My Resume <Image src={assets.download_icon} alt='' className='w-4' />
+          </motion.a>
 
-        <motion.a 
-        initial={{y: 30, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 0.6, delay: 1.2}}
-        href="https://www.linkedin.com/in/eescat2004/" target="_blank" rel="noopener noreferrer" className='px-12 py-3 border rounded-full border-gray-500 flex 
-        items-center gap-2 bg-blue-400 dark:text-black hover:bg-blue-500'>
-                LinkedIn <Image src={assets.linkedIn} alt='' className='w-4' /></motion.a>
+          <motion.a
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            href="https://www.linkedin.com/in/eescat2004/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-48 h-14 border rounded-full border-gray-500 bg-blue-400 dark:text-black flex items-center justify-center gap-2 hover:bg-blue-500">
+            LinkedIn
+            <Image src={assets.linkedIn} alt="" className="w-4" />
+          </motion.a>
         </div>
     </div>
   )
