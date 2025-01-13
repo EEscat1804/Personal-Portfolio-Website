@@ -90,8 +90,8 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Ethernet',
-        description: '(Fullstack)',
+        title: 'Ethernet (Fullstack)',
+        description: 'Social Media App',
         bgImage: 'work-1.png',
         link: 'https://github.com/EEscat1804/Ethernetmain',
         demolink: 'https://ethernetmain.vercel.app/',
@@ -103,8 +103,8 @@ export const workData = [
         link: 'https://github.com/EEscat1804/NBA-MVP-Predictor',
     },
     {
-        title: 'Etherprint',
-        description: '(Fullstack/Design)',
+        title: 'Etherprint (Fullstack/Design)',
+        description: 'Custom Shirt Maker',
         bgImage: '/work-3.png',
         link: 'https://github.com/EEscat1804/Etherprints',
         demolink: 'https://ethanescat.com/',
