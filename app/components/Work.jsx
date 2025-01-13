@@ -20,8 +20,11 @@ const Work = ({ isDarkMode }) => {
 
       <motion.p 
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-        Welcome to my web development portfolio! Explore a collection of projects 
-        showcasing my expertise in front-end development.
+        Welcome to my portfolio! Explore a collection of projects 
+        showcasing my expertise in software development, data analysis, and design.
+        Check out ethernet to see a fullstack instagram inspired social media web application or 
+        ethernet, a web application that combines my love for software and graphic design that allows
+        the user to create a custom designed t-shirt.
       </motion.p>
 
       <motion.div 
