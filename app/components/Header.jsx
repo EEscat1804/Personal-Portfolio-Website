@@ -41,9 +41,11 @@ const Header = ({isDarkMode}) => {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
-            href="#contact"
-            className="w-48 h-14 border border-white rounded-full bg-black text-white flex items-center justify-center gap-2 hover:bg-darkHover">
-            Contact Me
+            href="https://calendar.app.google/ySjA7dCnfEYTAyrD6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-48 h-14 border border-white rounded-full bg-gray-700 text-white flex items-center justify-center gap-2 hover:bg-black dark:hover:bg-darkHover">
+            Schedule Meeting
             <Image src={assets.right_arrow_white} alt="" className="w-4" />
           </motion.a>
 
@@ -67,6 +69,7 @@ const Header = ({isDarkMode}) => {
             LinkedIn
             <Image src={assets.linkedIn} alt="" className="w-4" />
           </motion.a>
+
         </div>
     </div>
   )
