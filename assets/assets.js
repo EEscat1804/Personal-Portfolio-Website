@@ -96,7 +96,7 @@ export const workData = [
         description: 'Social Media App',
         bgImage: 'work-1.png',
         link: 'https://github.com/EEscat1804/Ethernetmain',
-        demolink: 'https://ethanescat.com/',
+        demolink: 'https://ethernetmain.vercel.app/',
     },
     {
         title: 'NBA MVP Predictor',
@@ -109,7 +109,7 @@ export const workData = [
         description: 'Custom Shirt Maker',
         bgImage: '/work-3.png',
         link: 'https://github.com/EEscat1804/Etherprints',
-        demolink: 'https://ethernetmain.vercel.app/',
+        demolink: 'https://ethanescat.com/',
     },
     {
         title: 'Spotify Playlist Analysis',
