@@ -41,6 +41,7 @@ import jupiter from './jupiter.png'
 import sendarrow from './sendarrow.png'
 import nba from './nba.png'
 import pycharm from './pycharm.png'
+import arduino from './arduino.png'
 
 export const assets = {
     user_image,
@@ -86,6 +87,7 @@ export const assets = {
     sendarrow,
     nba,
     pycharm,
+    arduino,
 };
 
 export const workData = [
@@ -94,12 +96,12 @@ export const workData = [
         description: 'Social Media App',
         bgImage: 'work-1.png',
         link: 'https://github.com/EEscat1804/Ethernetmain',
-        demolink: 'https://ethernetmain.vercel.app/',
+        demolink: 'https://ethanescat.com/',
     },
     {
         title: 'NBA MVP Predictor',
         description: '(Data Analysis/ML)',
-        bgImage: 'work-5.png',
+        bgImage: 'work-2.png',
         link: 'https://github.com/EEscat1804/NBA-MVP-Predictor',
     },
     {
@@ -107,7 +109,7 @@ export const workData = [
         description: 'Custom Shirt Maker',
         bgImage: '/work-3.png',
         link: 'https://github.com/EEscat1804/Etherprints',
-        demolink: 'https://ethanescat.com/',
+        demolink: 'https://ethernetmain.vercel.app/',
     },
     {
         title: 'Spotify Playlist Analysis',
@@ -118,7 +120,7 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Software Engineering', description: 'Web development is the process of building, programming...', link: '' },
+    { icon: assets.web_icon, title: 'Software Engineering', description: 'I have experience in both front-end and backend creating websites such as a social media application and a custom shirt maker.', link: '' },
     { icon: assets.mobile_icon, title: 'Data Analysis', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'Video Editing', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
     { icon: assets.graphics_icon, title: 'Graphic Design', description: 'Creative design solutions to enhance visual communication...', link: '' },
@@ -131,5 +133,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.git, assets.vscode, assets.pycharm, assets.jupiter, assets.mongodb
+    assets.git, assets.vscode, assets.pycharm, assets.jupiter, assets.mongodb, assets.arduino
 ];
