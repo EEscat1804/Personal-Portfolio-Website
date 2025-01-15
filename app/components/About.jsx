@@ -26,8 +26,8 @@ const About = ({isDarkMode}) => {
                 Hello, my name is Ethan Escat currently a third year studying EECS at Cal. I have a deep interest in 
                 robotics and AI and I want to use this interest to make lives of others easier. At Cal I have taken coursework that
                 lets me practice my teamwork and collaboration skills. Before Berkeley I worked as a math tutor for my community college
-                that allowed me to break out of my shell and develop key communication skills. Currently I am a member of PASAE as a transfer
-                rep intern where I help represent transfer STEM students and providing resources to help transfers find their place in Berkeley. 
+                that allowed me to break out of my shell and develop key communication skills. Currently I am a member of PASAE (Pilipinx Association of Scientists, Architects, and Engineers) 
+                as a transfer rep intern where I help represent transfer STEM students and providing resources to help transfers find their place in Berkeley. 
                 I am eager to improve my skills and gain new experiences, I am open to work and find new opportunities so feel free to connect with me!
               </p>
 
