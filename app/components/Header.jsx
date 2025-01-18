@@ -54,7 +54,7 @@ const Header = ({isDarkMode}) => {
               whileInView={{y: 0, opacity: 1}}
               transition={{duration: 0.6, delay: 1.2}}
               href="/sample-resume.pdf" download="Ethan_Escat_Resume.pdf" className='w-48 h-14 border rounded-full border-gray-400 flex 
-              items-center justify-center gap-2 bg-white dark:text-black hover:bg-gray-500'>
+              items-center justify-center gap-2 bg-white dark:text-black hover:bg-gray-200'>
               My Resume <Image src={assets.download_icon} alt='' className='w-4' />
           </motion.a>
 
