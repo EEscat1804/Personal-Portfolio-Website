@@ -27,7 +27,13 @@ const Header = ({ isDarkMode }) => {
         if (typingIndex < words[wordIndex].length) {
           setTypingIndex(typingIndex + 1);
         } else {
-          setDeleting(true);
+          if (!isWaiting) {
+            setIsWaiting(true); 
+            setTimeout(() => {
+              setIsWaiting(false); 
+              setDeleting(true); 
+            }, 3000); 
+          }
         }
       }
     }, 150);
