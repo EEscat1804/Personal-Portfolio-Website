@@ -68,7 +68,7 @@ const Header = ({ isDarkMode }) => {
           {words[wordIndex].slice(0, typingIndex)}
         </span>
         {typingIndex < words[wordIndex].length && (
-          <span className="cursor animate-blink"></span>
+           <span className="animate-blink">|</span>
         )}
       </motion.h1>
 
