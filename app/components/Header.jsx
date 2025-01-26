@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Header = ({ isDarkMode }) => {
-  const words = ['Engineer', 'Creator', 'Innovator', 'Designer'];
+  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Problem Solver'];
   const [currentWord, setCurrentWord] = useState('Engineer');
   const [typingIndex, setTypingIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -17,10 +17,7 @@ const Header = ({ isDarkMode }) => {
           setTypingIndex(typingIndex - 1);
         } else {
           setDeleting(false);
-          // Wait for 3 seconds before starting the next word
-          setTimeout(() => {
-            setWordIndex((wordIndex + 1) % words.length); // Go to the next word
-          }, 3000);
+          setWordIndex((wordIndex + 1) % words.length); // Go to next word
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
@@ -29,9 +26,9 @@ const Header = ({ isDarkMode }) => {
           setDeleting(true);
         }
       }
-    }, 150); // Typing speed is set to 150ms
+    }, 150);
 
-    return () => clearInterval(typingInterval); // Clean up on component unmount
+    return () => clearInterval(typingInterval);
   }, [typingIndex, deleting, wordIndex]);
 
   return (
