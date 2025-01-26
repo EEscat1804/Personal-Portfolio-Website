@@ -23,6 +23,19 @@ export default {
       gridTemplateColumns: {
         'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
       }
+      cursor {
+        display: inline-block;
+        width: 10px;
+        height: 20px;
+        background-color: #000; 
+        margin-left: 4px;
+        animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+      }
     },
   },
   darkMode: 'selector',
