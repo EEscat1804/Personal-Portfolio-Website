@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Header = ({ isDarkMode }) => {
-  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Problem Solver'];
+  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Designer'];
   const [typingIndex, setTypingIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
-  const [isWaiting, setIsWaiting] = useState(false); // New state to manage wait time
+  const [isWaiting, setIsWaiting] = useState(false); 
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -16,23 +16,23 @@ const Header = ({ isDarkMode }) => {
         if (typingIndex > 0) {
           setTypingIndex(typingIndex - 1);
         } else {
-          // Once deletion is done, switch word after a small delay
+    
           setDeleting(false);
           setTimeout(() => {
-            setWordIndex((wordIndex + 1) % words.length); // Go to next word
-            setTypingIndex(0); // Start typing from the first character
-          }, 300); // 300ms delay after word is deleted
+            setWordIndex((wordIndex + 1) % words.length); 
+            setTypingIndex(0); 
+          }, 500); 
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
           setTypingIndex(typingIndex + 1);
         } else {
           if (!isWaiting) {
-            setIsWaiting(true); // Start waiting after typing is finished
+            setIsWaiting(true); 
             setTimeout(() => {
-              setIsWaiting(false); // Stop waiting after 3 seconds
-              setDeleting(true); // Start deleting after waiting
-            }, 3000); // Wait for 3 seconds before starting deletion
+              setIsWaiting(false); 
+              setDeleting(true); 
+            }, 3000); 
           }
         }
       }
