@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Header = ({ isDarkMode }) => {
-  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Designer'];
-  const [currentWord, setCurrentWord] = useState('Engineer');
+  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Problem Solver'];
   const [typingIndex, setTypingIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
+  const [isWaiting, setIsWaiting] = useState(false); // New state to manage wait time
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -28,18 +28,18 @@ const Header = ({ isDarkMode }) => {
           setTypingIndex(typingIndex + 1);
         } else {
           if (!isWaiting) {
-            setIsWaiting(true); 
+            setIsWaiting(true); // Start waiting after typing is finished
             setTimeout(() => {
-              setIsWaiting(false); 
-              setDeleting(true); 
-            }, 3000); 
+              setIsWaiting(false); // Stop waiting after 3 seconds
+              setDeleting(true); // Start deleting after waiting
+            }, 3000); // Wait for 3 seconds before starting deletion
           }
         }
       }
     }, 150);
 
     return () => clearInterval(typingInterval);
-  }, [typingIndex, deleting, wordIndex]);
+  }, [typingIndex, deleting, wordIndex, isWaiting]);
 
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
@@ -64,7 +64,13 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        Aspiring <span className="text-blue-500">{words[wordIndex].slice(0, typingIndex)}</span>
+        Aspiring{' '}
+        <span className="text-blue-500">
+          {words[wordIndex].slice(0, typingIndex)}
+        </span>
+        {typingIndex < words[wordIndex].length && (
+          <span className="cursor"></span> // This will show the cursor during typing
+        )}
       </motion.h1>
 
       <motion.p
