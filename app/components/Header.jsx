@@ -66,7 +66,7 @@ const Header = ({ isDarkMode }) => {
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
         Aspiring{' '}
-        <span className="text-blue-500">
+        <span className="text-blue-500 dark:text-red-500">
           {words[wordIndex].slice(0, typingIndex)}
         </span>
         <span className="cursor animate-blink">|</span> 
