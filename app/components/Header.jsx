@@ -67,13 +67,11 @@ const Header = ({ isDarkMode }) => {
       >
         Aspiring{' '}
         <span className="text-blue-500">
-          {words[wordIndex].slice(0, typingIndex)}
+        {words[wordIndex].slice(0, typingIndex)}
         </span>
-        {typingIndex < words[wordIndex].length && (
-           <span className="animate-blink">|</span>
-        )}
-      </motion.h1>
-
+        <span className="cursor animate-blink">|</span> 
+        </motion.h1>
+      
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
