@@ -16,14 +16,12 @@ const Header = ({ isDarkMode }) => {
         if (typingIndex > 0) {
           setTypingIndex(typingIndex - 1);
         } else {
-          // Once deletion is done, wait for a moment before switching words
+          // Once deletion is done, switch word after a small delay
           setDeleting(false);
           setTimeout(() => {
-            // Move to the next word and reset typing index to 0
-            setWordIndex((wordIndex + 1) % words.length);
-            setTypingIndex(0); // Reset typing index to start the next word
-            setIsWaiting(true); // Start waiting
-          }, 300); // Small delay after word is deleted
+            setWordIndex((wordIndex + 1) % words.length); // Go to next word
+            setTypingIndex(0); // Start typing from the first character
+          }, 300); // 300ms delay after word is deleted
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
@@ -84,55 +82,59 @@ const Header = ({ isDarkMode }) => {
         I am a UC Berkeley EECS student currently interested in the applications of robotics and AI.
       </motion.p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-2 mt-4">
-          <motion.a
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            href="https://calendar.app.google/ySjA7dCnfEYTAyrD6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-48 h-14 border rounded-full border-gray-500 bg-red-400 dark:text-black flex items-center justify-center gap-2 hover:bg-red-500">
-            Schedule Meeting
-            <Image src={assets.right_arrow_white} alt="" className="w-4" />
-          </motion.a>
+      <div className="flex flex-col sm:flex-row items-center gap-2 mt-4">
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          href="https://calendar.app.google/ySjA7dCnfEYTAyrD6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-48 h-14 border rounded-full border-gray-500 bg-red-400 dark:text-black flex items-center justify-center gap-2 hover:bg-red-500"
+        >
+          Schedule Meeting
+          <Image src={assets.right_arrow_white} alt="" className="w-4" />
+        </motion.a>
 
-          <motion.a 
-              initial={{y: 30, opacity: 0}}
-              whileInView={{y: 0, opacity: 1}}
-              transition={{duration: 0.6, delay: 1.2}}
-              href="/sample-resume.pdf" download="Ethan_Escat_Resume.pdf" className='w-48 h-14 border rounded-full border-gray-400 flex 
-              items-center justify-center gap-2 bg-white dark:text-black hover:bg-gray-200'>
-              My Resume <Image src={assets.download_icon} alt='' className='w-4' />
-          </motion.a>
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          href="/sample-resume.pdf"
+          download="Ethan_Escat_Resume.pdf"
+          className="w-48 h-14 border rounded-full border-gray-400 flex items-center justify-center gap-2 bg-white dark:text-black hover:bg-gray-200"
+        >
+          My Resume <Image src={assets.download_icon} alt="" className="w-4" />
+        </motion.a>
 
-          <motion.a
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            href="https://www.linkedin.com/in/eescat2004/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-48 h-14 border rounded-full border-gray-500 bg-blue-400 dark:text-black flex items-center justify-center gap-2 hover:bg-blue-500">
-            LinkedIn
-            <Image src={assets.linkedIn} alt="" className="w-4" />
-          </motion.a>
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          href="https://www.linkedin.com/in/eescat2004/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-48 h-14 border rounded-full border-gray-500 bg-blue-400 dark:text-black flex items-center justify-center gap-2 hover:bg-blue-500"
+        >
+          LinkedIn
+          <Image src={assets.linkedIn} alt="" className="w-4" />
+        </motion.a>
 
-          <motion.a
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.6 }}
-            href="https://github.com/EEscat1804"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-48 h-14 border rounded-full border-gray-500 bg-gray-400 dark:text-black flex items-center justify-center gap-2 hover:bg-gray-500">
-            GitHub
-            <Image src={assets.send_icon} alt="" className="w-4" />
-          </motion.a>
-
-        </div>
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.6 }}
+          href="https://github.com/EEscat1804"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-48 h-14 border rounded-full border-gray-500 bg-gray-400 dark:text-black flex items-center justify-center gap-2 hover:bg-gray-500"
+        >
+          GitHub
+          <Image src={assets.send_icon} alt="" className="w-4" />
+        </motion.a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
