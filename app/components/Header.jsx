@@ -31,11 +31,11 @@ const Header = ({ isDarkMode }) => {
             setTimeout(() => {
               setIsWaiting(false);
               setDeleting(true);
-            }, 3000);
+            }, 2500);
           }
         }
       }
-    }, 150);
+    }, 120);
 
     return () => clearInterval(typingInterval);
   }, [typingIndex, deleting, wordIndex, isWaiting]);
