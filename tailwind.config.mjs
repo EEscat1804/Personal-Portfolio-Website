@@ -14,30 +14,26 @@ export default {
       },
       fontFamily: {
         Outfit: ["Outfit", "sans-serif"],
-        Ovo: ["Ovo", "serif"]
+        Ovo: ["Ovo", "serif"],
       },
       boxShadow: {
-        'black' : '4px 4px 0 #000',
-        'white' : '4px 4px 0 #fff',
+        black: '4px 4px 0 #000',
+        white: '4px 4px 0 #fff',
       },
       gridTemplateColumns: {
-        'auto': 'repeat(auto-fit, minmax(200px, 1fr))'
-      }
-      cursor {
-        display: inline-block;
-        width: 10px;
-        height: 20px;
-        background-color: #000; 
-        margin-left: 4px;
-        animation: blink 0.8s step-end infinite;
-    }
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
-      }
+        auto: 'repeat(auto-fit, minmax(200px, 1fr))',
+      },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0 },
+        },
+      },
+      animation: {
+        blink: 'blink 0.8s step-end infinite',
+      },
     },
   },
-  darkMode: 'selector',
+  darkMode: 'selector', 
   plugins: [],
 };
