@@ -8,7 +8,7 @@ const Header = ({ isDarkMode }) => {
   const [typingIndex, setTypingIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
-  const [isWaiting, setIsWaiting] = useState(false); 
+  const [isWaiting, setIsWaiting] = useState(false);
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -16,23 +16,22 @@ const Header = ({ isDarkMode }) => {
         if (typingIndex > 0) {
           setTypingIndex(typingIndex - 1);
         } else {
-    
           setDeleting(false);
           setTimeout(() => {
-            setWordIndex((wordIndex + 1) % words.length); 
-            setTypingIndex(0); 
-          }, 700); 
+            setWordIndex((wordIndex + 1) % words.length);
+            setTypingIndex(0);
+          }, 400);
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
           setTypingIndex(typingIndex + 1);
         } else {
           if (!isWaiting) {
-            setIsWaiting(true); 
+            setIsWaiting(true);
             setTimeout(() => {
-              setIsWaiting(false); 
-              setDeleting(true); 
-            }, 3000); 
+              setIsWaiting(false);
+              setDeleting(true);
+            }, 3000);
           }
         }
       }
@@ -69,7 +68,7 @@ const Header = ({ isDarkMode }) => {
           {words[wordIndex].slice(0, typingIndex)}
         </span>
         {typingIndex < words[wordIndex].length && (
-          <span className="cursor"></span> // This will show the cursor during typing
+          <span className="cursor animate-blink"></span>
         )}
       </motion.h1>
 
@@ -138,3 +137,4 @@ const Header = ({ isDarkMode }) => {
 };
 
 export default Header;
+
