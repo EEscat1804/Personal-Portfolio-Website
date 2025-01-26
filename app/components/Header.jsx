@@ -17,7 +17,10 @@ const Header = ({ isDarkMode }) => {
           setTypingIndex(typingIndex - 1);
         } else {
           setDeleting(false);
-          setWordIndex((wordIndex + 1) % words.length); // Go to next word
+          // Wait for 3 seconds before starting the next word
+          setTimeout(() => {
+            setWordIndex((wordIndex + 1) % words.length); // Go to the next word
+          }, 3000);
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
@@ -26,9 +29,9 @@ const Header = ({ isDarkMode }) => {
           setDeleting(true);
         }
       }
-    }, 150);
+    }, 150); // Typing speed is set to 150ms
 
-    return () => clearInterval(typingInterval);
+    return () => clearInterval(typingInterval); // Clean up on component unmount
   }, [typingIndex, deleting, wordIndex]);
 
   return (
