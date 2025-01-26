@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Header = ({ isDarkMode }) => {
-  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Problem Solver'];
+  const words = ['Engineer', 'Developer', 'Creator', 'Innovator', 'Designer'];
   const [currentWord, setCurrentWord] = useState('Engineer');
   const [typingIndex, setTypingIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
