@@ -16,12 +16,14 @@ const Header = ({ isDarkMode }) => {
         if (typingIndex > 0) {
           setTypingIndex(typingIndex - 1);
         } else {
-          // Once deletion is done, switch word after a small delay
+          // Once deletion is done, wait for a moment before switching words
           setDeleting(false);
           setTimeout(() => {
-            setWordIndex((wordIndex + 1) % words.length); // Go to next word
-            setTypingIndex(0); // Start typing from the first character
-          }, 300); // 300ms delay after word is deleted
+            // Move to the next word and reset typing index to 0
+            setWordIndex((wordIndex + 1) % words.length);
+            setTypingIndex(0); // Reset typing index to start the next word
+            setIsWaiting(true); // Start waiting
+          }, 300); // Small delay after word is deleted
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
