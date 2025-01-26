@@ -11,34 +11,36 @@ const Header = ({ isDarkMode }) => {
   const [isWaiting, setIsWaiting] = useState(false);
 
   useEffect(() => {
-    const typingInterval = setInterval(() => {
-      if (deleting) {
-        if (typingIndex > 0) {
-          setTypingIndex(typingIndex - 1);
-        } else {
-          setDeleting(false);
-          setTimeout(() => {
-            setWordIndex((wordIndex + 1) % words.length);
-            setTypingIndex(0);
-          }, 500);
-        }
+  const typingInterval = setInterval(() => {
+    if (deleting) {
+      if (typingIndex > 0) {
+        setTypingIndex(typingIndex - 1);
       } else {
-        if (typingIndex < words[wordIndex].length) {
-          setTypingIndex(typingIndex + 1);
-        } else {
-          if (!isWaiting) {
-            setIsWaiting(true);
-            setTimeout(() => {
-              setIsWaiting(false);
-              setDeleting(true);
-            }, 2500);
-          }
+        // Finish deleting the word, pause briefly, and then move to the next word
+        setDeleting(false);
+        setTimeout(() => {
+          setWordIndex((wordIndex + 1) % words.length); // Move to the next word
+          setTypingIndex(0); // Reset typing index
+        }, 300); // Small pause before starting to type the new word
+      }
+    } else {
+      if (typingIndex < words[wordIndex].length) {
+        setTypingIndex(typingIndex + 1);
+      } else {
+        // Finished typing the word, wait before deleting
+        if (!isWaiting) {
+          setIsWaiting(true);
+          setTimeout(() => {
+            setIsWaiting(false);
+            setDeleting(true);
+          }, 3000); // Wait 3 seconds before deleting
         }
       }
-    }, 120);
+    }
+  }, 150);
 
-    return () => clearInterval(typingInterval);
-  }, [typingIndex, deleting, wordIndex, isWaiting]);
+  return () => clearInterval(typingInterval);
+}, [typingIndex, deleting, wordIndex, isWaiting, words]);
 
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
