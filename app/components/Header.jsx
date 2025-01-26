@@ -13,34 +13,26 @@ const Header = ({ isDarkMode }) => {
   useEffect(() => {
   const typingInterval = setInterval(() => {
     if (deleting) {
+      // Deleting logic
       if (typingIndex > 0) {
-        setTypingIndex(typingIndex - 1);
+        setTypingIndex((prev) => prev - 1);
       } else {
-        // Finish deleting the word, pause briefly, and then move to the next word
         setDeleting(false);
-        setTimeout(() => {
-          setWordIndex((wordIndex + 1) % words.length); // Move to the next word
-          setTypingIndex(0); // Reset typing index
-        }, 300); // Small pause before starting to type the new word
+        setWordIndex((prev) => (prev + 1) % words.length); // Move to the next word
       }
     } else {
+      // Typing logic
       if (typingIndex < words[wordIndex].length) {
-        setTypingIndex(typingIndex + 1);
+        setTypingIndex((prev) => prev + 1);
       } else {
-        // Finished typing the word, wait before deleting
-        if (!isWaiting) {
-          setIsWaiting(true);
-          setTimeout(() => {
-            setIsWaiting(false);
-            setDeleting(true);
-          }, 3000); // Wait 3 seconds before deleting
-        }
+        // Pause before starting to delete
+        setTimeout(() => setDeleting(true), 1000); // Pause for 1 second
       }
     }
-  }, 150);
+  }, 150); // Typing speed
 
   return () => clearInterval(typingInterval);
-}, [typingIndex, deleting, wordIndex, isWaiting, words]);
+}, [typingIndex, deleting, words, wordIndex]);
 
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
