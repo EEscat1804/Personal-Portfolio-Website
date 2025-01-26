@@ -21,7 +21,7 @@ const Header = ({ isDarkMode }) => {
           setTimeout(() => {
             setWordIndex((wordIndex + 1) % words.length); 
             setTypingIndex(0); 
-          }, 500); 
+          }, 700); 
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
