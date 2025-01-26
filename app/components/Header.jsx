@@ -26,7 +26,7 @@ const Header = ({ isDarkMode }) => {
         setTypingIndex((prev) => prev + 1);
       } else {
         // Pause before starting to delete
-        setTimeout(() => setDeleting(true), 2500); // Pause for 1 second
+        setTimeout(() => setDeleting(true), 1000); // Pause for 1 second
       }
     }
   }, 150); // Typing speed
