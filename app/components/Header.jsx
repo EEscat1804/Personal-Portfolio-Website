@@ -10,7 +10,7 @@ const Header = ({ isDarkMode }) => {
   const [wordIndex, setWordIndex] = useState(0);
   const [isWaiting, setIsWaiting] = useState(false);
 
-  useEffect(() => {
+ useEffect(() => {
   const typingInterval = setInterval(() => {
     if (deleting) {
       // Deleting logic
@@ -18,15 +18,20 @@ const Header = ({ isDarkMode }) => {
         setTypingIndex((prev) => prev - 1);
       } else {
         setDeleting(false);
-        setWordIndex((prev) => (prev + 1) % words.length); // Move to the next word
+        // Move to the next word after deleting
+        setTimeout(() => {
+          setWordIndex((prev) => (prev + 1) % words.length); // Loop through words
+        }, 700); // Short delay before starting the next word
       }
     } else {
       // Typing logic
       if (typingIndex < words[wordIndex].length) {
         setTypingIndex((prev) => prev + 1);
       } else {
-        // Pause before starting to delete
-        setTimeout(() => setDeleting(true), 1000); // Pause for 1 second
+        // Pause for 1.5 seconds after the word is typed fully
+        setTimeout(() => {
+          setDeleting(true); // Start deleting after 1.5 seconds
+        }, 1500); // 1.5-second delay
       }
     }
   }, 150); // Typing speed
