@@ -20,7 +20,7 @@ const Header = ({ isDarkMode }) => {
           setTimeout(() => {
             setWordIndex((wordIndex + 1) % words.length);
             setTypingIndex(0);
-          }, 400);
+          }, 500);
         }
       } else {
         if (typingIndex < words[wordIndex].length) {
